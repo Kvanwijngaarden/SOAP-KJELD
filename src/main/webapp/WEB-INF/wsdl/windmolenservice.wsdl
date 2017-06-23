@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+	name="windmolenService"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:req="http://nl.hu.iac/windmolenservice/addrequest"
+	xmlns:rsp="http://nl.hu.iac/windmolenservice/addresponse"
+	xmlns:remreq="http://nl.hu.iac/windmolenservice/removerequest"
+	xmlns:remrsp="http://nl.hu.iac/windmolenservice/removeresponse"
+	xmlns:rdreq="http://nl.hu.iac/windmolenservice/readrequest"
+	xmlns:rdrsp="http://nl.hu.iac/windmolenservice/readresponse"
+	xmlns:upreq="http://nl.hu.iac/windmolenservice/updaterequest"
+	xmlns:uprsp="http://nl.hu.iac/windmolenservice/updateresponse"
+	xmlns:flt="http://nl.hu.iac/windmolenservice/fault"
+	xmlns="http://nl.hu.iac/windmolenservice/"
+	targetNamespace="http://nl.hu.iac/windmolenservice/">
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/addrequest"
+				schemaLocation="addrequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/addresponse"
+				schemaLocation="addresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/removerequest"
+						schemaLocation="removerequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/removeresponse"
+						schemaLocation="removeresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/readrequest"
+						schemaLocation="readrequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/readresponse"
+						schemaLocation="readresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/updaterequest"
+						schemaLocation="updaterequest.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/updateresponse"
+						schemaLocation="updateresponse.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/windmolenservice/fault"
+				schemaLocation="fault.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="addrequest">
+		<wsdl:part name="addrequest" element="req:addwindmolenRequest"/>
+	</wsdl:message>
+	<wsdl:message name="addresponse">
+		<wsdl:part name="addresponse" element="rsp:addwindmolenResponse"/>
+	</wsdl:message>
+	<wsdl:message name="removerequest">
+		<wsdl:part name="removerequest" element="remreq:removewindmolenRequest"/>
+	</wsdl:message>
+	<wsdl:message name="removeresponse">
+		<wsdl:part name="removeresponse" element="remrsp:removewindmolenResponse"/>
+	</wsdl:message>
+	<wsdl:message name="readrequest">
+		<wsdl:part name="readrequest" element="rdreq:readwindmolenRequest"/>
+	</wsdl:message>
+	<wsdl:message name="readresponse">
+		<wsdl:part name="readresponse" element="rdrsp:readwindmolenResponse"/>
+	</wsdl:message>
+	<wsdl:message name="updaterequest">
+		<wsdl:part name="updaterequest" element="upreq:updatewindmolenRequest"/>
+	</wsdl:message>
+	<wsdl:message name="updateresponse">
+		<wsdl:part name="updateresponse" element="uprsp:updatewindmolenResponse"/>
+	</wsdl:message>
+	<wsdl:message name="fault">
+		<wsdl:part name="fault" element="flt:windmolenFault"/>
+	</wsdl:message>
+	<wsdl:portType name="windmolenServiceInterface">
+		<wsdl:operation name="addwindmolen">
+			<wsdl:input message="addrequest"/>
+			<wsdl:output message="addresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="removewindmolen">
+			<wsdl:input message="removerequest"/>
+			<wsdl:output message="removeresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="readwindmolen">
+			<wsdl:input message="readrequest"/>
+			<wsdl:output message="readresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="updatewindmolen">
+			<wsdl:input message="updaterequest"/>
+			<wsdl:output message="updateresponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="windmolenServiceBinding" type="windmolenServiceInterface">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="addwindmolen">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="removewindmolen">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="readwindmolen">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="updatewindmolen">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="windmolenServiceService">
+		<wsdl:port name="WS-Port" binding="windmolenServiceBinding">
+			<soap:address location="http://localhost:8080/ws-producer/soap"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

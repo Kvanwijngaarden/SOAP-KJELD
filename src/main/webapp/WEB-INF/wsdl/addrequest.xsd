@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://nl.hu.iac/windmolenservice/addrequest" elementFormDefault="qualified" targetNamespace="http://nl.hu.iac/windmolenservice/addrequest">
+	<xs:element name="addwindmolenRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Fabrikant" type="xs:string" />
+				<xs:element name="ProductID" type="xs:string" />
+				<xs:element name="ProductieDatum" type="xs:date" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

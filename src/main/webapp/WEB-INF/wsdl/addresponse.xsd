@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://nl.hu.iac/windmolenservice/addresponse" elementFormDefault="qualified" targetNamespace="http://nl.hu.iac/windmolenservice/addresponse">
+	<element name="addwindmolenResponse">
+		<complexType>
+			<sequence>
+				<element name="result" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

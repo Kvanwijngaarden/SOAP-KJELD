@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="soap_kjeld:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="soap_kjeld.war">
+      <element id="artifact" artifact-name="soap_kjeld:war exploded" />
+    </root>
+  </artifact>
+</component>
